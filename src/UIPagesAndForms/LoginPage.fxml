@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane id="pnMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="1024.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LogInController">
+   <children>
+      <ImageView fx:id="ivAlgomaU" fitHeight="144.0" fitWidth="400.0" layoutX="73.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/algoma%20logo.png" />
+         </image>
+      </ImageView>
+      <VBox id="loginForm" fx:id="vbLogInForm" layoutX="101.0" layoutY="432.0" prefHeight="200.0" prefWidth="323.0">
+         <children>
+            <VBox fx:id="vbEmail" prefHeight="72.0" prefWidth="280.0" styleClass="loginBox">
+               <children>
+                  <Label fx:id="lbEmail" text="Email" />
+                  <TextField fx:id="tfEmail" styleClass="textInput" />
+               </children>
+            </VBox>
+            <VBox fx:id="vbPassword" prefHeight="200.0" prefWidth="100.0" styleClass="loginBox">
+               <children>
+                  <Label fx:id="lbPassword" text="Password" />
+                  <PasswordField fx:id="tfPassword" styleClass="textInput" />
+               </children>
+            </VBox>
+            <Button id="loginButton" fx:id="btSubmit" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#logIn" styleClass="newButton" text="Login" />
+         </children>
+      </VBox>
+      <ImageView fx:id="ivBackground" fitHeight="713.0" fitWidth="493.0" layoutX="539.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/loginPicture.jpg" />
+         </image>
+      </ImageView>
+      <VBox id="titleBox" fx:id="vbSubtitle" layoutX="73.0" layoutY="174.0">
+         <children>
+            <Text id="department" fx:id="txDepartment" strokeType="OUTSIDE" strokeWidth="0.0" text="Department of Mathematics and Computer Science " wrappingWidth="375.0" />
+            <Text id="EARStitle" fx:id="txEARS" strokeType="OUTSIDE" strokeWidth="0.0" text="Employment Application Review System" wrappingWidth="375.0" />
+         </children>
+      </VBox>
+      <Text fx:id="txError" layoutX="152.0" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="236.1875" />
+   </children>
+</Pane>

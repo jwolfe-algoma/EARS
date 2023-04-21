@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane id="pnMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="1024.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="lbYourSearches" layoutX="149.0" layoutY="159.0" styleClass="tableTitles" text="Your Searches" />
+      <TableView id="accountTable" fx:id="tvSearches1" layoutX="27.0" layoutY="226.0" onMouseClicked="#openFacultySearchPage" prefHeight="438.0" prefWidth="455.0">
+        <columns>
+          <TableColumn fx:id="tcPosition1" prefWidth="87.0" text="Position" />
+          <TableColumn fx:id="tcStart1" prefWidth="90.0" text="Starting Date" />
+            <TableColumn fx:id="tcEnd1" prefWidth="92.0" text="Ending Date" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TableView id="accountTable" fx:id="tvSearches2" layoutX="546.0" layoutY="226.0" prefHeight="438.0" prefWidth="455.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <columns>
+            <TableColumn fx:id="tcPosition2" prefWidth="87.0" text="Position" />
+            <TableColumn fx:id="tcStart2" prefWidth="90.0" text="Starting Date" />
+            <TableColumn fx:id="tcEnd2" prefWidth="92.0" text="Ending Date" />
+         </columns>
+      </TableView>
+      <Label fx:id="lbAvailSearches" layoutX="634.0" layoutY="159.0" styleClass="tableTitles" text="Available Searches" />
+      <Pane id="pnHeader" layoutX="12.0" layoutY="14.0" prefHeight="100.0" prefWidth="1001.0">
+         <children>
+            <HBox id="hbLogo" layoutX="14.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView id="ivAlgomaU" fitHeight="73.0" fitWidth="316.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/algoma%20logo%20reversed.png" />
+                     </image>
+                  </ImageView>
+                  <Text id="txEARS" strokeType="OUTSIDE" strokeWidth="0.0" text="EARS" />
+               </children>
+            </HBox>
+            <Button id="btProfile" fx:id="btProfile" layoutX="858.0" layoutY="26.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#openUserAccountForm" prefHeight="50.0" prefWidth="50.0" />
+            <Text id="txTitle" layoutX="377.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Faculty Searches" />
+            <Button id="btLogOut" fx:id="btLogOut" layoutX="929.0" layoutY="26.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#logOut" prefHeight="50.0" prefWidth="50.0" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

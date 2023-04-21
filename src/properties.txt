@@ -1,0 +1,9 @@
+for the IP field, please enter the address of the MySQL server where the EARS database is stored, or where you wish to create it
+for the port field, please enter the port of the MySQL sever
+for the user field, please enter the username of a user with edit privileges to the EARS database
+for the password field, enter the passowrd of the above user
+
+IP=localhost
+port=3307
+user=root
+password=test

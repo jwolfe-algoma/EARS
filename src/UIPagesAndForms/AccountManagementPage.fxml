@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane id="pnMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="1024.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView id="tvAccounts" fx:id="tvAccounts" layoutX="96.0" layoutY="163.0" onMouseClicked="#openEditAccountForm" prefHeight="438.0" prefWidth="839.0">
+        <columns>
+          <TableColumn id="tcUsername" fx:id="tcFName" prefWidth="87.0" text="First Name" />
+            <TableColumn fx:id="tcLName" prefWidth="75.0" text="Last Name" />
+          <TableColumn id="tcEmail" fx:id="tcEmail" prefWidth="90.0" text="Login Email" />
+            <TableColumn id="tcPassword" fx:id="tcPassword" prefWidth="92.0" text="Password" />
+            <TableColumn id="tcAccountLevel" fx:id="tcAccountLevel" prefWidth="107.0" text="Account Level" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button id="btSubmit" fx:id="btSubmit" layoutX="384.0" layoutY="632.0" mnemonicParsing="false" onAction="#openAddAccountForm" styleClass="newButton" text="Create New Account" />
+      <Pane id="pnHeader" layoutX="12.0" layoutY="9.0" prefHeight="100.0" prefWidth="1001.0">
+         <children>
+            <HBox id="hbLogo" layoutX="14.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView id="ivAlgomaU" fitHeight="73.0" fitWidth="316.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/algoma%20logo%20reversed.png" />
+                     </image>
+                  </ImageView>
+                  <Text id="txEARS" strokeType="OUTSIDE" strokeWidth="0.0" text="EARS" />
+               </children>
+            </HBox>
+            <Button id="btProfile" fx:id="btProfile" layoutX="858.0" layoutY="26.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#openUserAccountForm" prefHeight="50.0" prefWidth="50.0" />
+            <Text id="txTitle" layoutX="334.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Management" />
+            <Button id="btLogOut" fx:id="btLogOut" layoutX="929.0" layoutY="26.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#logOut" prefHeight="50.0" prefWidth="50.0" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

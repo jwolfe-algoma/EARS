@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane id="pnMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="1024.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="btReturn" layoutX="19.0" layoutY="653.0" mnemonicParsing="false" onAction="#returnToFacultySearches" prefHeight="51.0" prefWidth="357.0" styleClass="returnButton" text="Return to Faculty Searches" />
+      <Pane id="pnHeader" layoutX="12.0" layoutY="14.0" prefHeight="100.0" prefWidth="1001.0">
+         <children>
+            <HBox id="hbLogo" layoutX="14.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView id="ivAlgomaU" fitHeight="73.0" fitWidth="316.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/algoma%20logo%20reversed.png" />
+                     </image>
+                  </ImageView>
+                  <Text id="txEARS" strokeType="OUTSIDE" strokeWidth="0.0" text="EARS" />
+               </children>
+            </HBox>
+            <Button id="btProfile" fx:id="btProfile" layoutX="858.0" layoutY="26.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#openUserAccountForm" prefHeight="50.0" prefWidth="50.0" />
+            <Text id="txTitle" layoutX="356.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Information" />
+            <Button id="btLogOut" fx:id="btLogOut" layoutX="929.0" layoutY="26.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#logOut" prefHeight="50.0" prefWidth="50.0" />
+         </children>
+      </Pane>
+      <GridPane id="summary" fx:id="gpInfo" layoutX="19.0" layoutY="169.0" prefHeight="454.0" prefWidth="431.0">
+         <children>
+            <Label fx:id="lbPosition" text="Position" />
+            <Label fx:id="lbDescription" text="Description" GridPane.rowIndex="1" />
+            <Label fx:id="lbRequirements" text="Requirements" GridPane.rowIndex="2" />
+            <Text id="position" fx:id="txPosition" strokeType="OUTSIDE" strokeWidth="0.0" text="Professor" wrappingWidth="250.0" GridPane.columnIndex="1" />
+            <Text id="description" fx:id="txDescription" strokeType="OUTSIDE" strokeWidth="0.0" text="New professor in the department of math and computer science" wrappingWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text id="requirements" fx:id="txRequirements" strokeType="OUTSIDE" strokeWidth="0.0" text="5 years teaching experience" wrappingWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="lbStart" text="Start date" GridPane.rowIndex="3" />
+            <Label fx:id="lbEnd" text="End date" GridPane.rowIndex="4" />
+            <Text id="start" fx:id="txStart" strokeType="OUTSIDE" strokeWidth="0.0" text="23-February-2023" wrappingWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Text id="end" fx:id="txEnd" strokeType="OUTSIDE" strokeWidth="0.0" text="23-March-2023" wrappingWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="169.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="10.0" prefWidth="262.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label fx:id="lbApplicants" layoutX="650.0" layoutY="122.0" styleClass="tableTitles" text="Applicants" />
+      <TableView id="accountTable" fx:id="tvApplicants" layoutX="457.0" layoutY="177.0" onMouseClicked="#openApplicantInfoRegularPage" prefHeight="482.0" prefWidth="544.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <columns>
+            <TableColumn fx:id="tcApplicantName" prefWidth="87.0" text="Name" />
+            <TableColumn fx:id="tcReview" prefWidth="90.0" text="Review Completed" />
+            <TableColumn fx:id="tcStatus" prefWidth="92.0" text="Status" />
+         </columns>
+      </TableView>
+   </children>
+</Pane>
